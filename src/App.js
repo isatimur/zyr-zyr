@@ -4,7 +4,11 @@ import { View } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
-import Persik from './panels/Persik';
+import SecondScreen from './panels/SecondScreen';
+import ThirdScreen from './panels/ThirdScreen';
+import Events from './panels/Events';
+import Favourites from './panels/Favourites';
+import DetailEvent from './panels/DetailEvent';
 
 class App extends React.Component {
 	constructor(props) {
@@ -37,7 +41,11 @@ class App extends React.Component {
 		return (
 			<View activePanel={this.state.activePanel}>
 				<Home id="home" fetchedUser={this.state.fetchedUser} go={this.go} />
-				<Persik id="persik" go={this.go} />
+				<SecondScreen id="secondScreen" go={this.go} />
+				<ThirdScreen id="thirdScreen" go={this.go} />
+				<Events id="events" go={this.go} />
+				<Favourites id="favourites" go={this.go} />
+				<DetailEvent id="detailEvent" go={this.go} />
 			</View>
 		);
 	}

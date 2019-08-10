@@ -1,0 +1,129 @@
+
+.SecondScreen {
+    display: block;
+    width: 30%;
+    max-width: 240px;
+    margin: 20px auto;
+}
+
+.ThirdScreen {
+    display: block;
+    width: 30%;
+    max-width: 240px;
+    margin: 20px auto;
+}
+
+.Events {
+    display: block;
+    width: 30%;
+    max-width: 240px;
+    margin: 20px auto;
+}
+
+.Favourites {
+    display: block;
+    width: 30%;
+    max-width: 240px;
+    margin: 20px auto;
+}
+
+.DetailEvent {
+    display: block;
+    width: 30%;
+    max-width: 240px;
+    margin: 20px auto;
+}
+
+
+.Header__in {
+    background: var(--background_page);
+    display: unset;
+}
+
+#eventId {
+    font-family: Roboto, Arial;
+    text-align: center;
+    align-content: center;
+    background-image: url("../img/start.png");
+    background-color: black;
+    width: 100%;
+}
+
+#helloId {
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+#introId {
+    font-family: Roboto, Arial;
+    text-align: center;
+    align-content: center;
+    /*width: 100%;*/
+    /*margin: 0 auto;*/
+    /*display: inline-block;*/
+    color: gray;
+    font-size: 1.4em;
+}
+
+#buttonId .Button__in {
+    /*margin: auto 125px;*/
+    position: 'absolute';
+    bottom:0;
+    /*background-color: rgba(27, 27, 27, 0.9);*/
+}
+
+.advertise {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    horiz-align: center;
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    margin: 0 auto;
+    display: inline-block;
+
+}
+
+
+/* Optional, different gutter size on mobile */
+@media (max-width: 800px) {
+    .my-masonry-grid {
+        margin-left: -15px; /* gutter size offset */
+    }
+    .my-masonry-grid_column {
+        padding-left: 15px; /* gutter size offset */
+    }
+    .my-masonry-grid_column > div {
+        margin-bottom: 15px; /* space between items */
+    }
+}
+
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+}
+.my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+}
+
+/*// Style your items*/
+   .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+       background-color: transparent;
+       margin-bottom: 30px;
+   }
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    horiz-align: center;
+}
