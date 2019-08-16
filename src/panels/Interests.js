@@ -61,10 +61,11 @@ const interests = [
 
 const osname = platform();
 const selected = [];
-const cells = interests.map((item, key, props) =>
+const cells = props => interests.map((item, key, props) =>
+
     <Group>
-        <Div>
-            <Button id="bg" style={{
+    <Div id={item.id} id="bg">
+            <Button id={item.id}  style={{
                 backgroundImage: "url(" + item.src + ")",
                 height: 200,
                 width: '100%',
@@ -75,15 +76,13 @@ const cells = interests.map((item, key, props) =>
                 borderRadius: '12px'
             }}
                     onClick={function () {
-                        let idx = selected.indexOf(item);
-                        if (idx > 0) {
-                            selected[idx].pop();
-                        } else {
-                            selected.push(item);
-                        }
                         console.log("pushed or not?")
-                        return this;
-                    }} data-to="home"
+                        console.log(props)
+                        console.log(item)
+                    return this;
+                    }}
+                // onClick={props.go}
+                    data-to="example"
             >
                 {/*<img src={item.src}/>*/}
                 <Div className="centered"
@@ -96,7 +95,7 @@ const cells = interests.map((item, key, props) =>
         </Div>
     </Group>
 );
-const SecondScreen = props => (
+const Interests = props => (
 
     <Panel id={props.id}>
         <PanelHeader
@@ -113,14 +112,15 @@ const SecondScreen = props => (
         <Masonry
             // breakpointCols={breakpointColumnsObj}
         >
-            {cells}
+            {cells(props)}
         </Masonry>
     </Panel>
 );
 
-SecondScreen.propTypes = {
+Interests.propTypes = {
     id: PropTypes.string.isRequired,
     go: PropTypes.func.isRequired,
+    selected: PropTypes.array.isRequired
 };
 
-export default SecondScreen;
+export default Interests;
